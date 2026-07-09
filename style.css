@@ -89,21 +89,20 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
 }
 
-
 .marker-food {
-    background: #9b6bd8;
+    background: #c96bd8;
 }
 
 .marker-walk {
-    background: #7dbd59;
+    background: #7cc647;
 }
 
 .marker-rest {
-    background: #ef9435;
+    background: #ea7c3e;
 }
 
 .marker-fun {
-    background: #3fa1ba;
+    background: #369fef;
 }
 
 .legend {
