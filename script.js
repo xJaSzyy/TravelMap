@@ -7,42 +7,6 @@ L.tileLayer('https://core-renderer-tiles.maps.yandex.com/tiles?l=map&v=21.06.15-
     attribution: '© Яндекс'
 }).addTo(map);
 
-const legend = L.control({
-    position: 'topleft'
-});
-
-
-legend.onAdd = function () {
-
-    const div = L.DomUtil.create('div', 'legend');
-
-    div.innerHTML = `
-        <div class="legend-item">
-            <span class="legend-color marker-food"></span>
-            Еда
-        </div>
-
-        <div class="legend-item">
-            <span class="legend-color marker-walk"></span>
-            Прогулки
-        </div>
-
-        <div class="legend-item">
-            <span class="legend-color marker-rest"></span>
-            Отдых
-        </div>
-
-        <div class="legend-item">
-            <span class="legend-color marker-fun"></span>
-            Развлечения
-        </div>
-    `;
-
-    return div;
-};
-
-legend.addTo(map);
-
 const filter = L.control({
     position: 'topright'
 });
