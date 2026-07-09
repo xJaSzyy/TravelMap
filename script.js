@@ -49,27 +49,9 @@ fetch('places.json')
 
         places.forEach((place, index) => {
 
-            const yandex = place.yandex ||
-                `https://yandex.ru/maps/?pt=${place.lon},${place.lat}&z=18`;
+            const yandex = place.yandex || `https://yandex.ru/maps/?pt=${place.lon},${place.lat}&z=18`;
 
-            const dgis = place["2gis"] ||
-                `https://2gis.ru/search/${place.lat},${place.lon}`;
-
-            const popup = `
-                <div class="popup-title">${place.name}</div>
-            
-                <div class="popup-buttons">
-            
-                    <a href="${yandex}" target="_blank">
-                        Яндекс
-                    </a>
-            
-                    <a href="${dgis}" target="_blank">
-                        2ГИС
-                    </a>
-            
-                </div>
-            `;
+            const dgis = place["2gis"] || `https://2gis.ru/search/${place.lat},${place.lon}`;
 
             const colors = {
                 food: "marker-food",
@@ -77,18 +59,32 @@ fetch('places.json')
                 rest: "marker-rest",
                 fun: "marker-fun"
             };
-
-
             const markerClass = colors[place.type] || "marker-walk";
-            console.log(markerClass);
+
+            const popup = `
+                <div class="popup-title">${place.name}</div>
+            
+                <div class="popup-buttons">
+            
+                    <a href="${yandex}" target="_blank" class="${markerClass}">
+                        Яндекс
+                    </a>
+                    
+            
+                    <a href="${dgis}" target="_blank" class="${markerClass}">
+                        2ГИС
+                    </a>
+            
+                </div>
+            `;
 
             const numberIcon = L.divIcon({
                 className: 'number-marker',
                 html: `
-        <div class="${markerClass}">
-            ${index + 1}
-        </div>
-    `,
+                    <div class="${markerClass}">
+                        ${index + 1}
+                    </div>
+                `,
                 iconSize: [32, 32],
                 iconAnchor: [16, 16]
             });
@@ -98,18 +94,9 @@ fetch('places.json')
             })
                 .addTo(map)
                 .bindPopup(popup);
-
-
+            
             marker.on('click', function () {
-                map.flyTo(
-                    [place.lat, place.lon],
-                    16,
-                    {
-                        duration: 0.75
-                    }
-                );
+                map.flyTo([place.lat, place.lon], 16, {duration: 0.75});
             });
-
         });
-
     });
