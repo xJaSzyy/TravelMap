@@ -1,5 +1,6 @@
 const map = L.map('map', {
-    crs: L.CRS.EPSG3395
+    crs: L.CRS.EPSG3395,
+    zoomControl: false,
 }).setView([55.047123, 82.904967], 16);
 
 L.tileLayer('https://core-renderer-tiles.maps.yandex.com/tiles?l=map&v=21.06.15-0&x={x}&y={y}&z={z}', {
@@ -7,7 +8,7 @@ L.tileLayer('https://core-renderer-tiles.maps.yandex.com/tiles?l=map&v=21.06.15-
 }).addTo(map);
 
 const legend = L.control({
-    position: 'bottomright'
+    position: 'topleft'
 });
 
 
@@ -23,7 +24,7 @@ legend.onAdd = function () {
 
         <div class="legend-item">
             <span class="legend-color marker-walk"></span>
-            Прогулка
+            Прогулки
         </div>
 
         <div class="legend-item">
@@ -33,15 +34,57 @@ legend.onAdd = function () {
 
         <div class="legend-item">
             <span class="legend-color marker-fun"></span>
-            Развлечение
+            Развлечения
         </div>
     `;
 
     return div;
 };
 
-
 legend.addTo(map);
+
+const filter = L.control({
+    position: 'topright'
+});
+
+filter.onAdd = function () {
+
+    const div = L.DomUtil.create('div', 'filter');
+
+    div.innerHTML = `
+        <label class="filter-item">
+            <input type="checkbox" checked data-type="food">
+            <span class="custom-checkbox marker-food"></span>
+            Еда
+        </label>
+    
+        <label class="filter-item">
+            <input type="checkbox" checked data-type="walk">
+            <span class="custom-checkbox marker-walk"></span>
+            Прогулки
+        </label>
+    
+        <label class="filter-item">
+            <input type="checkbox" checked data-type="rest">
+            <span class="custom-checkbox marker-rest"></span>
+            Отдых
+        </label>
+    
+        <label class="filter-item">
+            <input type="checkbox" checked data-type="fun">
+            <span class="custom-checkbox marker-fun"></span>
+            Развлечения
+        </label>
+    `;
+
+    L.DomEvent.disableClickPropagation(div);
+
+    return div;
+};
+
+filter.addTo(map);
+
+const markers = [];
 
 fetch('places.json')
     .then(response => response.json())
@@ -95,8 +138,39 @@ fetch('places.json')
                 .addTo(map)
                 .bindPopup(popup);
             
+            markers.push({
+                marker: marker,
+                type: place.type
+            });
+            
             marker.on('click', function () {
                 map.flyTo([place.lat, place.lon], 16, {duration: 0.75});
             });
         });
     });
+
+document.querySelectorAll('.filter input').forEach(input => {
+
+    input.addEventListener('change', function () {
+
+        const activeTypes = [];
+
+        document.querySelectorAll('.filter input:checked')
+            .forEach(cb => {
+                activeTypes.push(cb.dataset.type);
+            });
+
+
+        markers.forEach(item => {
+
+            if (activeTypes.includes(item.type)) {
+                item.marker.addTo(map);
+            } else {
+                map.removeLayer(item.marker);
+            }
+
+        });
+
+    });
+
+});
