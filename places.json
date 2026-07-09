@@ -2,7 +2,9 @@
   {
     "name": "Гостиниц.Net",
     "lat": 55.047123,
-    "lon": 82.904967
+    "lon": 82.904967,
+    "yandex": "https://yandex.ru/maps/-/CTuGaPin",
+    "2gis": "https://go.2gis.com/drURL"
   },
   {
     "name": "Аквапарк",
@@ -43,5 +45,15 @@
     "name": "Николаевская",
     "lat": 55.024295, 
     "lon": 82.921595
+  },
+  {
+    "name": "HanSan",
+    "lat": 55.038962, 
+    "lon": 82.927742
+  },
+  {
+    "name": "Chingu",
+    "lat": 55.033662, 
+    "lon": 82.904435
   }
 ]

@@ -12,10 +12,10 @@ fetch('places.json')
 
         places.forEach((place, index) => {
 
-            const yandex =
+            const yandex = place.yandex ||
                 `https://yandex.ru/maps/?pt=${place.lon},${place.lat}&z=18`;
 
-            const dgis =
+            const dgis = place["2gis"] ||
                 `https://2gis.ru/search/${place.lat},${place.lon}`;
 
             const popup = `
