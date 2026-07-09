@@ -72,16 +72,14 @@ fetch('places.json')
                 <div class="popup-title">${place.name}</div>
             
                 <div class="popup-buttons">
-            
-                    <a href="${yandex}" target="_blank" class="${markerClass}">
-                        Яндекс
+                    <a href="${yandex}" target="_blank" class="map-icon">
+                        <img src="icons/yandex.svg" alt="Яндекс">
                     </a>
-                    
-            
-                    <a href="${dgis}" target="_blank" class="${markerClass}">
-                        2ГИС
+                
+                    <a href="${dgis}" target="_blank" class="map-icon">
+                        <img src="icons/2gis.svg" alt="2ГИС">
                     </a>
-            
+                
                 </div>
             `;
 
