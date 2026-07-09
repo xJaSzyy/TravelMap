@@ -4,76 +4,87 @@
     "lat": 55.047123,
     "lon": 82.904967,
     "yandex": "https://yandex.ru/maps/-/CTuGaPin",
-    "2gis": "https://go.2gis.com/drURL"
+    "2gis": "https://go.2gis.com/drURL",
+    "type": "rest"
   },
   {
     "name": "Аквапарк",
     "lat": 55.020037,
     "lon": 82.886647,
     "yandex": "https://yandex.ru/maps/-/CTuGmQJh",
-    "2gis": "https://go.2gis.com/taiC6"
+    "2gis": "https://go.2gis.com/taiC6",
+    "type": "fun"
   },
   {
     "name": "Зоопарк",
     "lat": 55.056630,
     "lon": 82.889051,
     "yandex": "https://yandex.ru/maps/-/CTuGmBO8",
-    "2gis": "https://go.2gis.com/DXmT2"
+    "2gis": "https://go.2gis.com/DXmT2",
+    "type": "walk"
   },
   {
     "name": "Набережная",
     "lat": 55.006256,
     "lon": 82.939704,
     "yandex": "https://yandex.ru/maps/-/CTuGm6km",
-    "2gis": "https://go.2gis.com/HDfgc"
+    "2gis": "https://go.2gis.com/HDfgc",
+    "type": "walk"
   },
   {
     "name": "Парк Арена",
     "lat": 54.996018,
     "lon": 82.923324,
     "yandex": "https://yandex.ru/maps/-/CTuGmOoi",
-    "2gis": "https://go.2gis.com/zmHaf"
+    "2gis": "https://go.2gis.com/zmHaf",
+    "type": "walk"
   },
   {
     "name": "Солнечный день",
     "lat": 55.048549,
     "lon": 82.912298,
     "yandex": "https://yandex.ru/maps/-/CTuGqBIQ",
-    "2gis": "https://go.2gis.com/HimPI"
+    "2gis": "https://go.2gis.com/HimPI",
+    "type": "food"
   },
   {
     "name": "Баклажани",
-    "lat": 55.042986, 
+    "lat": 55.042986,
     "lon": 82.922113,
     "yandex": "https://yandex.ru/maps/-/CTuGq8KB",
-    "2gis": "https://go.2gis.com/wp9io"
+    "2gis": "https://go.2gis.com/wp9io",
+    "type": "food"
   },
   {
     "name": "Кардамон",
-    "lat": 55.025700, 
+    "lat": 55.025700,
     "lon": 82.915486,
     "yandex": "https://yandex.ru/maps/-/CTuGqXyU",
-    "2gis": "https://go.2gis.com/SGUlQ"
+    "2gis": "https://go.2gis.com/SGUlQ",
+    "type": "food"
   },
   {
     "name": "Николаевская",
-    "lat": 55.024295, 
+    "lat": 55.024295,
     "lon": 82.921595,
     "yandex": "https://yandex.ru/maps/-/CTuGuA0s",
-    "2gis": "https://go.2gis.com/0ZzaG"
+    "2gis": "https://go.2gis.com/0ZzaG",
+    "type": "food"
   },
   {
     "name": "HanSan",
-    "lat": 55.038962, 
+    "lat": 55.038962,
     "lon": 82.927742,
     "yandex": "https://yandex.ru/maps/-/CTuGuFIF",
-    "2gis": "https://go.2gis.com/sNDfe"
+    "2gis": "https://go.2gis.com/sNDfe",
+    "type": "food"
   },
   {
     "name": "Chingu",
-    "lat": 55.033662, 
+    "lat": 55.033662,
     "lon": 82.904435,
     "yandex": "https://yandex.ru/maps/-/CTuGuRmc",
-    "2gis": "https://go.2gis.com/zrdo3"
+    "2gis": "https://go.2gis.com/zrdo3",
+    "type": "food"
   }
 ]

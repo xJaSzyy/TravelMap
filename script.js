@@ -6,6 +6,43 @@ L.tileLayer('https://core-renderer-tiles.maps.yandex.com/tiles?l=map&v=21.06.15-
     attribution: '© Яндекс'
 }).addTo(map);
 
+const legend = L.control({
+    position: 'bottomright'
+});
+
+
+legend.onAdd = function () {
+
+    const div = L.DomUtil.create('div', 'legend');
+
+    div.innerHTML = `
+        <div class="legend-item">
+            <span class="legend-color marker-food"></span>
+            Еда
+        </div>
+
+        <div class="legend-item">
+            <span class="legend-color marker-walk"></span>
+            Прогулка
+        </div>
+
+        <div class="legend-item">
+            <span class="legend-color marker-rest"></span>
+            Отдых
+        </div>
+
+        <div class="legend-item">
+            <span class="legend-color marker-fun"></span>
+            Развлечение
+        </div>
+    `;
+
+    return div;
+};
+
+
+legend.addTo(map);
+
 fetch('places.json')
     .then(response => response.json())
     .then(places => {
@@ -34,9 +71,24 @@ fetch('places.json')
                 </div>
             `;
 
+            const colors = {
+                food: "marker-food",
+                walk: "marker-walk",
+                rest: "marker-rest",
+                fun: "marker-fun"
+            };
+
+
+            const markerClass = colors[place.type] || "marker-walk";
+            console.log(markerClass);
+
             const numberIcon = L.divIcon({
                 className: 'number-marker',
-                html: `<div>${index + 1}</div>`,
+                html: `
+        <div class="${markerClass}">
+            ${index + 1}
+        </div>
+    `,
                 iconSize: [32, 32],
                 iconAnchor: [16, 16]
             });
