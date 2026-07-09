@@ -18,22 +18,15 @@ body {
 }
 
 .popup-title {
+    text-align: center;
     font-size: 18px;
     font-weight: bold;
-    margin-bottom: 8px;
-}
-
-.popup-text {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 
 .popup-buttons {
     display: flex;
-    gap: 8px;
-}
-
-.popup-buttons {
-    display: flex;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -56,10 +49,6 @@ body {
 
 .map-icon:hover {
     transform: scale(1.1);
-}
-
-.popup-buttons a:hover {
-    opacity:.8;
 }
 
 .number-marker div {

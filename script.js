@@ -98,7 +98,10 @@ fetch('places.json')
                 icon: numberIcon
             })
                 .addTo(map)
-                .bindPopup(popup);
+                .bindPopup(popup, {
+                    closeButton: false
+                });
+            
             
             markers.push({
                 marker: marker,
