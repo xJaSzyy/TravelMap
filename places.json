@@ -1,6 +1,7 @@
 [
   {
     "name": "Гостиниц.Net",
+    "description": "Апарт-отель, 8 (800) 201-95-41",
     "lat": 55.047123,
     "lon": 82.904967,
     "yandex": "https://yandex.ru/maps/-/CTuGaPin",
@@ -8,7 +9,8 @@
     "type": "rest"
   },
   {
-    "name": "Аквапарк",
+    "name": "Аквамир",
+    "description": "Аквапарк, термальный комплекс, баня",
     "lat": 55.020037,
     "lon": 82.886647,
     "yandex": "https://yandex.ru/maps/-/CTuGmQJh",
@@ -16,7 +18,8 @@
     "type": "fun"
   },
   {
-    "name": "Зоопарк",
+    "name": "Зоопарк имени Р. А. Шило",
+    "description": "Зоопарк, городской парк",
     "lat": 55.056630,
     "lon": 82.889051,
     "yandex": "https://yandex.ru/maps/-/CTuGmBO8",
@@ -24,7 +27,8 @@
     "type": "walk"
   },
   {
-    "name": "Набережная",
+    "name": "Колесо обозрения",
+    "description": "Михайловская набережная",
     "lat": 55.006256,
     "lon": 82.939704,
     "yandex": "https://yandex.ru/maps/-/CTuGm6km",
@@ -33,6 +37,7 @@
   },
   {
     "name": "Парк Арена",
+    "description": "Городской парк, сквер, лесопарк",
     "lat": 54.996018,
     "lon": 82.923324,
     "yandex": "https://yandex.ru/maps/-/CTuGmOoi",
@@ -41,6 +46,7 @@
   },
   {
     "name": "Солнечный день",
+    "description": "Столовая, кафе, быстрое питание",
     "lat": 55.048549,
     "lon": 82.912298,
     "yandex": "https://yandex.ru/maps/-/CTuGqBIQ",
@@ -49,6 +55,7 @@
   },
   {
     "name": "Баклажани",
+    "description": "Ресторан, доставка еды и обедов, кафе",
     "lat": 55.042986,
     "lon": 82.922113,
     "yandex": "https://yandex.ru/maps/-/CTuGq8KB",
@@ -57,6 +64,7 @@
   },
   {
     "name": "Кардамон",
+    "description": "Кафе, кофейня, ресторан",
     "lat": 55.025700,
     "lon": 82.915486,
     "yandex": "https://yandex.ru/maps/-/CTuGqXyU",
@@ -65,6 +73,7 @@
   },
   {
     "name": "Николаевская",
+    "description": "Кафе",
     "lat": 55.024295,
     "lon": 82.921595,
     "yandex": "https://yandex.ru/maps/-/CTuGuA0s",
@@ -73,6 +82,7 @@
   },
   {
     "name": "HanSan",
+    "description": "Кафе, ресторан",
     "lat": 55.038962,
     "lon": 82.927742,
     "yandex": "https://yandex.ru/maps/-/CTuGuFIF",
@@ -81,6 +91,7 @@
   },
   {
     "name": "Chingu",
+    "description": "Кафе",
     "lat": 55.033662,
     "lon": 82.904435,
     "yandex": "https://yandex.ru/maps/-/CTuGuRmc",

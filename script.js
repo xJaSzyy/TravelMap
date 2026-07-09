@@ -70,6 +70,8 @@ fetch('places.json')
 
             const popup = `
                 <div class="popup-title">${place.name}</div>
+                
+                <div class="popup-description">${place.description}</div>
             
                 <div class="popup-buttons">
                     <a href="${yandex}" target="_blank" class="map-icon">
