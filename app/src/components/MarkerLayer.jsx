@@ -1,49 +1,55 @@
-import { useEffect, useState } from "react";
+import {useEffect, useRef, useState} from "react";
 import L from "leaflet";
 import "leaflet.markercluster";
 import PlaceMarker from "./PlaceMarker";
 
 function MarkerLayer({map, places}) {
 
-    const [clusterGroup] = useState(() =>
+    const clusterGroup = useRef(
         L.markerClusterGroup({
-            zoomToBoundsOnClick:false
+            zoomToBoundsOnClick: false
         })
-    );
+    ).current;
 
-    useEffect(()=>{
+    useEffect(() => {
+
+        if (!map) {
+            return;
+        }
+
+        const handleClusterClick = (e) => {
+            L.DomEvent.stop(e);
+
+            map.flyToBounds(
+                e.layer.getBounds(),
+                {
+                    duration: 0.75,
+                    padding: [50, 50]
+                }
+            );
+        };
 
         clusterGroup.on(
             "clusterclick",
-            e=>{
-
-                L.DomEvent.stop(e);
-
-
-                map.flyToBounds(
-                    e.layer.getBounds(),
-                    {
-                        duration:0.75,
-                        padding:[50,50]
-                    }
-                );
-
-            }
+            handleClusterClick
         );
 
         map.addLayer(clusterGroup);
 
-        return ()=>{
+        return () => {
+            clusterGroup.off(
+                "clusterclick",
+                handleClusterClick
+            );
 
             map.removeLayer(clusterGroup);
-
         };
-    },[map]);
+    }, [map, clusterGroup]);
 
     return (
         <>
             {
-                places.map((place,index)=>(
+                places.map((place, index) => (
 
                     <PlaceMarker
                         key={place.id || index}

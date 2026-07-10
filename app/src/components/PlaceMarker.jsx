@@ -1,8 +1,10 @@
 import {useEffect} from "react";
 import L from "leaflet";
+import PlacePopup from "./PlacePopup";
+import {renderToStaticMarkup} from "react-dom/server";
 
 function PlaceMarker({map, place, index, clusterGroup}) {
-    
+
     useEffect(() => {
 
         const colors = {
@@ -13,7 +15,7 @@ function PlaceMarker({map, place, index, clusterGroup}) {
         };
 
         const markerClass = colors[place.type] || "marker-walk";
-        
+
         const icon = L.divIcon({
             className: "number-marker",
             html: `
@@ -32,12 +34,23 @@ function PlaceMarker({map, place, index, clusterGroup}) {
             }
         );
 
+        const popup = renderToStaticMarkup(
+            <PlacePopup place={place}/>
+        );
+
+        marker.bindPopup(
+            popup,
+            {
+                closeButton: false
+            }
+        );
+
         clusterGroup.addLayer(marker);
-        
+
         marker.on("click", () => {
-            map.flyTo([place.lat, place.lon], 16, { duration: 0.75 });
+            map.flyTo([place.lat, place.lon], 16, {duration: 0.75});
         });
-        
+
         return () => {
             clusterGroup.removeLayer(marker);
         };
