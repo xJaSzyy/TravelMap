@@ -45,7 +45,13 @@ export function createMarkers(map, places) {
                     <a href="${dgis}" target="_blank" class="map-icon">
                         <img src="icons/2gis.svg" alt="2ГИС">
                     </a>
-                
+                    
+                    <a href="#" 
+                       class="map-icon route-button"
+                       data-lat="${place.lat}"
+                       data-lon="${place.lon}">
+                       <img src="icons/route1.png" alt="Построить маршрут">
+                    </a>
                 </div>
             `;
 
