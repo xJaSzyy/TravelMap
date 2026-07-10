@@ -1,9 +1,21 @@
 const markers = [];
 
-const clusterGroup = L.markerClusterGroup();
+const clusterGroup = L.markerClusterGroup({
+    zoomToBoundsOnClick: false
+});
 
 export function createMarkers(map, places) {
+    clusterGroup.on('clusterclick', function (e) {
 
+        L.DomEvent.stop(e);
+
+        map.flyToBounds(e.layer.getBounds(), {
+            duration: 0.75,
+            padding: [50, 50]
+        });
+
+    });
+    
     places.forEach((place, index) => {
 
         const yandex = place.yandex || `https://yandex.ru/maps/?pt=${place.lon},${place.lat}&z=18`;
