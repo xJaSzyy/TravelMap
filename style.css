@@ -11,8 +11,8 @@ body {
 }
 
 .leaflet-tile-pane {
-    filter:
-            hue-rotate(300deg)
+    filter: 
+            hue-rotate(250deg)
             saturate(80%)
             brightness(105%);
 }
@@ -90,19 +90,19 @@ body {
 }
 
 .marker-food {
-    background: #c96bd8;
+    background: #df5a6a;
 }
 
 .marker-walk {
-    background: #7cc647;
+    background: #77bd42;
 }
 
 .marker-rest {
-    background: #ea7c3e;
+    background: #e4824c;
 }
 
 .marker-fun {
-    background: #369fef;
+    background: #48a5ed;
 }
 
 .legend {
