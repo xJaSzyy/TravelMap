@@ -6,7 +6,9 @@
     "lon": 82.904967,
     "yandex": "https://yandex.ru/maps/-/CTuGaPin",
     "2gis": "https://go.2gis.com/drURL",
-    "type": "rest"
+    "type": "rest",
+    "rating": 5.0,
+    "hours": "Круглосуточно"
   },
   {
     "name": "Аквамир",
@@ -15,7 +17,9 @@
     "lon": 82.886647,
     "yandex": "https://yandex.ru/maps/-/CTuGmQJh",
     "2gis": "https://go.2gis.com/taiC6",
-    "type": "fun"
+    "type": "fun",
+    "rating": 5.0,
+    "hours": "10:00–21:00"
   },
   {
     "name": "Зоопарк имени Р. А. Шило",
@@ -24,7 +28,9 @@
     "lon": 82.889051,
     "yandex": "https://yandex.ru/maps/-/CTuGmBO8",
     "2gis": "https://go.2gis.com/DXmT2",
-    "type": "walk"
+    "type": "walk",
+    "rating": 5.0,
+    "hours": "08:00–23:00"
   },
   {
     "name": "Колесо обозрения",
@@ -33,7 +39,9 @@
     "lon": 82.939704,
     "yandex": "https://yandex.ru/maps/-/CTuGm6km",
     "2gis": "https://go.2gis.com/HDfgc",
-    "type": "walk"
+    "type": "walk",
+    "rating": 5.0,
+    "hours": "13:00–00:00"
   },
   {
     "name": "Парк Арена",
@@ -42,7 +50,9 @@
     "lon": 82.923324,
     "yandex": "https://yandex.ru/maps/-/CTuGmOoi",
     "2gis": "https://go.2gis.com/zmHaf",
-    "type": "walk"
+    "type": "walk",
+    "rating": 4.9,
+    "hours": "Круглосуточно"
   },
   {
     "name": "Солнечный день",
@@ -51,7 +61,9 @@
     "lon": 82.912298,
     "yandex": "https://yandex.ru/maps/-/CTuGqBIQ",
     "2gis": "https://go.2gis.com/HimPI",
-    "type": "food"
+    "type": "food",
+    "rating": 4.9,
+    "hours": "08:00–22:00"
   },
   {
     "name": "Баклажани",
@@ -60,7 +72,9 @@
     "lon": 82.922113,
     "yandex": "https://yandex.ru/maps/-/CTuGq8KB",
     "2gis": "https://go.2gis.com/wp9io",
-    "type": "food"
+    "type": "food",
+    "rating": 4.8,
+    "hours": "10:00–22:00"
   },
   {
     "name": "Кардамон",
@@ -69,7 +83,9 @@
     "lon": 82.915486,
     "yandex": "https://yandex.ru/maps/-/CTuGqXyU",
     "2gis": "https://go.2gis.com/SGUlQ",
-    "type": "food"
+    "type": "food",
+    "rating": 5.0,
+    "hours": "10:00–23:00"
   },
   {
     "name": "Николаевская",
@@ -78,7 +94,9 @@
     "lon": 82.921595,
     "yandex": "https://yandex.ru/maps/-/CTuGuA0s",
     "2gis": "https://go.2gis.com/0ZzaG",
-    "type": "food"
+    "type": "food",
+    "rating": 4.6,
+    "hours": "11:00–21:00"
   },
   {
     "name": "HanSan",
@@ -87,7 +105,9 @@
     "lon": 82.927742,
     "yandex": "https://yandex.ru/maps/-/CTuGuFIF",
     "2gis": "https://go.2gis.com/sNDfe",
-    "type": "food"
+    "type": "food",
+    "rating": 4.3,
+    "hours": "10:00–20:00"
   },
   {
     "name": "Chingu",
@@ -96,6 +116,8 @@
     "lon": 82.904435,
     "yandex": "https://yandex.ru/maps/-/CTuGuRmc",
     "2gis": "https://go.2gis.com/zrdo3",
-    "type": "food"
+    "type": "food",
+    "rating": 4.5,
+    "hours": "11:00–23:00"
   }
 ]

@@ -22,6 +22,20 @@ export function createMarkers(map, places) {
                 <div class="popup-title">${place.name}</div>
                 
                 <div class="popup-description">${place.description}</div>
+                
+                <div class="popup-info">
+                    ${place.rating ? `
+                        <div class="popup-rating">
+                            ⭐ ${place.rating.toFixed(1)}
+                        </div>
+                    ` : ''}
+                
+                    ${place.hours ? `
+                        <div class="popup-hours">
+                            🕒 ${place.hours}
+                        </div>
+                    ` : ''}
+                </div>
             
                 <div class="popup-buttons">
                     <a href="${yandex}" target="_blank" class="map-icon">
@@ -49,7 +63,6 @@ export function createMarkers(map, places) {
         const marker = L.marker([place.lat, place.lon], {
             icon: numberIcon
         })
-            //.addTo(map)
             .bindPopup(popup, {
                 closeButton: false
             });
