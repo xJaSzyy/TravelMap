@@ -15,7 +15,9 @@ function Map() {
 
         L.tileLayer('https://core-renderer-tiles.maps.yandex.com/tiles?l=map&v=21.06.15-0&x={x}&y={y}&z={z}', { attribution: '© Яндекс' }).addTo(map);
 
-        console.log(mapRef.current);
+        return () => {
+            map.remove();
+        };
         
     }, []);
 
