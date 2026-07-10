@@ -219,8 +219,8 @@ body {
 
 @media (max-width: 600px) {
     .leaflet-top.leaflet-right {
-        top: 70px;
-        right: 10px;
+        top: 24px;
+        right: 8px;
     }
 
     .filter {
