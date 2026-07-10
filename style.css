@@ -6,15 +6,12 @@ body {
 }
 
 #map {
-    width:100%;
-    height:100vh;
+    width: 100%;
+    height: 100dvh;
 }
 
 .leaflet-tile-pane {
-    filter: 
-            hue-rotate(250deg)
-            saturate(80%)
-            brightness(105%);
+    filter: hue-rotate(250deg) saturate(80%) brightness(105%);
 }
 
 .popup-title {
@@ -62,7 +59,7 @@ body {
     justify-content: center;
     background: white;
     border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0,0,0,.25);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .25);
     transition: .2s;
 }
 
@@ -130,9 +127,11 @@ body {
     background: white;
     padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,.25);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .25);
     font-size: 14px;
     line-height: 24px;
+    max-height: 60vh;
+    overflow-y: auto;
 }
 
 .filter-title {
@@ -171,7 +170,7 @@ body {
     align-items: center;
     justify-content: center;
     border: 2px solid white;
-    box-shadow: 0 1px 4px rgba(0,0,0,.3);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
 }
 
 
@@ -187,17 +186,37 @@ body {
     font-weight: bold;
 }
 
-@media(max-width:600px) {
+.marker-cluster-small,
+.marker-cluster-medium,
+.marker-cluster-large {
+    background-color: rgba(0, 0, 0, 0.28);
+}
 
-    .legend {
-        font-size: 12px;
+
+.marker-cluster div {
+    background-color: #424242;
+    color: white;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .leaflet-top.leaflet-right {
+        top: 70px;
+        right: 10px;
+    }
+
+    .filter {
         padding: 8px;
-    }
-
-    .number-marker div {
-        width: 26px;
-        height: 26px;
         font-size: 13px;
+        border-radius: 12px;
     }
 
+    .filter-item {
+        gap: 6px;
+    }
+
+    .custom-checkbox {
+        width: 16px;
+        height: 16px;
+    }
 }

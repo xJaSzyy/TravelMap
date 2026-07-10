@@ -1,5 +1,7 @@
 const markers = [];
 
+const clusterGroup = L.markerClusterGroup();
+
 export function createMarkers(map, places) {
 
     places.forEach((place, index) => {
@@ -47,11 +49,12 @@ export function createMarkers(map, places) {
         const marker = L.marker([place.lat, place.lon], {
             icon: numberIcon
         })
-            .addTo(map)
+            //.addTo(map)
             .bindPopup(popup, {
                 closeButton: false
             });
 
+        clusterGroup.addLayer(marker);
 
         markers.push({
             marker: marker,
@@ -63,8 +66,13 @@ export function createMarkers(map, places) {
         });
     });
 
+    map.addLayer(clusterGroup);
 }
 
 export function getMarkers() {
     return markers;
+}
+
+export function getCluster() {
+    return clusterGroup;
 }
