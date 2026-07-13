@@ -26,7 +26,6 @@ function App() {
         place => types[place.type]
     );
 
-
     return (
         <div className="app">
 
