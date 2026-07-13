@@ -69,6 +69,16 @@ body {
   gap: 10px;
 }
 
+.route-button {
+  border: none;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 0;
+  cursor: pointer;
+  background: white;
+}
+
 .map-icon {
   width: 42px;
   height: 42px;
