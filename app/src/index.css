@@ -237,21 +237,15 @@ body {
 }
 
 @media (max-width: 600px) {
-  
-  .filter {
-    padding: 8px;
-    font-size: 13px;
-    border-radius: 12px;
-    top: 48px;
-    right: 16px;
-  }
 
-  .filter-item {
-    gap: 6px;
+  .filter {
+    top: 40px;
+    right: 16px;
   }
 
   .custom-checkbox {
     width: 16px;
     height: 16px;
   }
+
 }

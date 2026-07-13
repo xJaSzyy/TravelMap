@@ -23,7 +23,6 @@ function Filter({types, setTypes}) {
         }
     ];
 
-
     function toggle(type) {
         setTypes(prev => ({
             ...prev,
@@ -31,10 +30,8 @@ function Filter({types, setTypes}) {
         }));
     }
 
-
     return (
         <div className="filter">
-
             {categories.map(category => (
                 <label
                     key={category.id}
@@ -47,14 +44,13 @@ function Filter({types, setTypes}) {
                     />
 
                     <span
-                        className={`custom-checkbox ${category.className}`}
+                        className={`custom-checkbox ${types[category.id] ? category.className : ""}`}
                     />
 
                     {category.name}
 
                 </label>
             ))}
-
         </div>
     );
 }
