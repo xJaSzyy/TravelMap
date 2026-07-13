@@ -23,34 +23,37 @@ function Filter({types, setTypes}) {
         }
     ];
 
-    function toggle(type) {
-        setTypes(prev => ({
-            ...prev,
-            [type]: !prev[type]
-        }));
-    }
-
     return (
         <div className="filter">
+
             {categories.map(category => (
-                <label
+                <button
                     key={category.id}
                     className="filter-item"
+                    onClick={() =>
+                        setTypes(prev => ({
+                            ...prev,
+                            [category.id]: !prev[category.id]
+                        }))
+                    }
                 >
-                    <input
-                        type="checkbox"
-                        checked={types[category.id]}
-                        onChange={() => toggle(category.id)}
-                    />
-
                     <span
-                        className={`custom-checkbox ${types[category.id] ? category.className : ""}`}
-                    />
+                        className={
+                            `custom-checkbox ${
+                                types[category.id]
+                                    ? category.className
+                                    : ""
+                            }`
+                        }
+                    >
+                        {types[category.id] && "✓"}
+                    </span>
 
                     {category.name}
 
-                </label>
+                </button>
             ))}
+
         </div>
     );
 }

@@ -49,13 +49,12 @@ function MarkerLayer({map, places}) {
     return (
         <>
             {
-                places.map((place, index) => (
+                places.map((place) => (
 
                     <PlaceMarker
-                        key={place.id || index}
+                        key={place.id}
                         map={map}
                         place={place}
-                        index={index}
                         clusterGroup={clusterGroup}
                     />
 

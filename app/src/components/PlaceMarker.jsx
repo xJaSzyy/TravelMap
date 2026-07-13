@@ -4,7 +4,7 @@ import PlacePopup from "./PlacePopup";
 import {renderToStaticMarkup} from "react-dom/server";
 import { drawRoute } from "../services/routing.js";
 
-function PlaceMarker({map, place, index, clusterGroup}) {
+function PlaceMarker({map, place, clusterGroup}) {
 
     useEffect(() => {
 
@@ -21,7 +21,7 @@ function PlaceMarker({map, place, index, clusterGroup}) {
             className: "number-marker",
             html: `
                 <div class="${markerClass}">
-                    ${index + 1}
+                    ${place.id}
                 </div>
             `,
             iconSize: [32, 32],
