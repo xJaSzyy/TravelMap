@@ -1,4 +1,8 @@
+import {useRef} from "react";
+
 function Filter({types, setTypes}) {
+
+    const lastClick = useRef(0);
 
     const categories = [
         {
@@ -23,19 +27,36 @@ function Filter({types, setTypes}) {
         }
     ];
 
+    function toggle(type) {
+        const now = Date.now();
+
+        if (now - lastClick.current < 400) {
+            return;
+        }
+
+        lastClick.current = now;
+
+        setTypes(prev => ({
+            ...prev,
+            [type]: !prev[type]
+        }));
+    }
+
     return (
-        <div className="filter">
+        <div
+            className="filter"
+            onTouchStart={(e) => e.stopPropagation()}
+        >
 
             {categories.map(category => (
                 <button
                     key={category.id}
                     className="filter-item"
-                    onClick={() =>
-                        setTypes(prev => ({
-                            ...prev,
-                            [category.id]: !prev[category.id]
-                        }))
-                    }
+                    type="button"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        toggle(category.id);
+                    }}
                 >
                     <span
                         className={

@@ -9,7 +9,7 @@ import "leaflet.markercluster/dist/MarkerCluster.Default.css";
 import './index.css'
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  //<StrictMode>
     <App />
-  </StrictMode>,
+  //</StrictMode>,
 )
