@@ -31,15 +31,15 @@ function PlacePopup({place}) {
 
             <div className="popup-buttons">
                 <a href={yandex} target="_blank" className="map-icon">
-                    <img src="/icons/yandex.svg"/>
+                    <img src={`${import.meta.env.BASE_URL}icons/yandex.svg`} />
                 </a>
 
                 <a href={dgis} target="_blank" className="map-icon">
-                    <img src="/icons/2gis.svg"/>
+                    <img src={`${import.meta.env.BASE_URL}icons/2gis.svg`} />
                 </a>
 
                 <button id={`route-btn-${place.id}`} className="map-icon route-button">
-                    <img src="/icons/route.png" />
+                    <img src={`${import.meta.env.BASE_URL}icons/route.png`} />
                 </button>
             </div>
         </div>
