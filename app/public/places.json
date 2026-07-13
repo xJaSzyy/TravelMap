@@ -9,7 +9,8 @@
     "2gis": "https://go.2gis.com/drURL",
     "type": "rest",
     "rating": 5.0,
-    "hours": "Круглосуточно"
+    "hours": "Круглосуточно",
+    "layers": ["Август 2026"]
   },
   {
     "id": 2,
@@ -21,7 +22,8 @@
     "2gis": "https://go.2gis.com/taiC6",
     "type": "fun",
     "rating": 5.0,
-    "hours": "10:00–21:00"
+    "hours": "10:00–21:00",
+    "layers": ["Август 2026"]
   },
   {
     "id": 3,
@@ -33,7 +35,8 @@
     "2gis": "https://go.2gis.com/DXmT2",
     "type": "walk",
     "rating": 5.0,
-    "hours": "08:00–23:00"
+    "hours": "08:00–23:00",
+    "layers": ["Август 2026", "Май 2027"]
   },
   {
     "id": 4,
@@ -45,7 +48,8 @@
     "2gis": "https://go.2gis.com/HDfgc",
     "type": "walk",
     "rating": 5.0,
-    "hours": "13:00–00:00"
+    "hours": "13:00–00:00",
+    "layers": ["Август 2026"]
   },
   {
     "id": 5,
@@ -57,7 +61,8 @@
     "2gis": "https://go.2gis.com/zmHaf",
     "type": "walk",
     "rating": 4.9,
-    "hours": "Круглосуточно"
+    "hours": "Круглосуточно",
+    "layers": ["Август 2026"]
   },
   {
     "id": 6,
@@ -69,7 +74,8 @@
     "2gis": "https://go.2gis.com/HimPI",
     "type": "food",
     "rating": 4.9,
-    "hours": "08:00–22:00"
+    "hours": "08:00–22:00",
+    "layers": ["Август 2026"]
   },
   {
     "id": 7,
@@ -81,7 +87,8 @@
     "2gis": "https://go.2gis.com/wp9io",
     "type": "food",
     "rating": 4.8,
-    "hours": "10:00–22:00"
+    "hours": "10:00–22:00",
+    "layers": ["Август 2026"]
   },
   {
     "id": 8,
@@ -93,7 +100,8 @@
     "2gis": "https://go.2gis.com/SGUlQ",
     "type": "food",
     "rating": 5.0,
-    "hours": "10:00–23:00"
+    "hours": "10:00–23:00",
+    "layers": ["Август 2026"]
   },
   {
     "id": 9,
@@ -105,7 +113,8 @@
     "2gis": "https://go.2gis.com/0ZzaG",
     "type": "food",
     "rating": 4.6,
-    "hours": "11:00–21:00"
+    "hours": "11:00–21:00",
+    "layers": ["Август 2026"]
   },
   {
     "id": 10,
@@ -117,7 +126,8 @@
     "2gis": "https://go.2gis.com/sNDfe",
     "type": "food",
     "rating": 4.3,
-    "hours": "10:00–20:00"
+    "hours": "10:00–20:00",
+    "layers": ["Август 2026"]
   },
   {
     "id": 11,
@@ -129,6 +139,7 @@
     "2gis": "https://go.2gis.com/zrdo3",
     "type": "food",
     "rating": 4.5,
-    "hours": "11:00–23:00"
+    "hours": "11:00–23:00",
+    "layers": ["Август 2026"]
   }
 ]

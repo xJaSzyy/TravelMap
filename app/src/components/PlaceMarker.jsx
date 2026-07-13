@@ -2,37 +2,23 @@ import {useEffect} from "react";
 import L from "leaflet";
 import PlacePopup from "./PlacePopup";
 import {renderToStaticMarkup} from "react-dom/server";
-import { drawRoute } from "../services/routing.js";
+import {drawRoute} from "../services/routing.js";
 
 function PlaceMarker({map, place, clusterGroup}) {
 
     useEffect(() => {
 
-        const colors = {
-            food: "marker-food",
-            walk: "marker-walk",
-            rest: "marker-rest",
-            fun: "marker-fun"
-        };
-
-        const markerClass = colors[place.type] || "marker-walk";
+        const markerClass = `marker-${place.type}`;
 
         const icon = L.divIcon({
             className: "number-marker",
-            html: `
-                <div class="${markerClass}">
-                    ${place.id}
-                </div>
-            `,
+            html: `<div class="${markerClass}">${place.id}</div>`,
             iconSize: [32, 32],
             iconAnchor: [16, 16]
         });
 
         const marker = L.marker(
-            [place.lat, place.lon],
-            {
-                icon
-            }
+            [place.lat, place.lon], {icon}
         );
 
         const popup = renderToStaticMarkup(
