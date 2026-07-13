@@ -2,6 +2,7 @@ import {useEffect} from "react";
 import L from "leaflet";
 import PlacePopup from "./PlacePopup";
 import {renderToStaticMarkup} from "react-dom/server";
+import { drawRoute } from "../services/routing.js";
 
 function PlaceMarker({map, place, index, clusterGroup}) {
 
@@ -38,12 +39,17 @@ function PlaceMarker({map, place, index, clusterGroup}) {
             <PlacePopup place={place}/>
         );
 
-        marker.bindPopup(
-            popup,
-            {
-                closeButton: false
+        marker.bindPopup(popup, {
+            closeButton: false
+        });
+
+        marker.on("popupopen", () => {
+            const btn = document.getElementById(`route-btn-${place.id}`);
+
+            if (btn) {
+                btn.onclick = () => drawRoute(place, map);
             }
-        );
+        });
 
         clusterGroup.addLayer(marker);
 

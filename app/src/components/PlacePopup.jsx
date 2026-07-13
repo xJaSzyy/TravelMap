@@ -38,8 +38,8 @@ function PlacePopup({place}) {
                     <img src="/icons/2gis.svg"/>
                 </a>
 
-                <button className="map-icon route-button">
-                    <img src="/icons/route.png"/>
+                <button id={`route-btn-${place.id}`} className="map-icon route-button">
+                    <img src="/icons/route.png" />
                 </button>
             </div>
         </div>
