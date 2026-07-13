@@ -3,15 +3,20 @@ import L from "leaflet";
 import "leaflet.markercluster";
 import PlaceMarker from "./PlaceMarker";
 import Filter from "./Filter.jsx";
+import LayersPanel from "./LayersPanel.jsx";
+import {categories} from "../data/categories.js";
 
 function MarkerLayer({map, places}) {
 
-    const [types, setTypes] = useState({
-        food: true,
-        walk: true,
-        rest: true,
-        fun: true
-    });
+    const [types, setTypes] = useState(
+        () =>
+            Object.fromEntries(
+                categories.map(category => [
+                    category.id,
+                    true
+                ])
+            )
+    );
     
     const clusterGroup = useRef(
         L.markerClusterGroup({
