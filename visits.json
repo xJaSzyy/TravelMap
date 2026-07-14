@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "placeId": 1,
+        "day": 1,
+        "date": "05.08.2026",
+        "startTime": "14:00",
+        "endTime": null,
+        "note": "Заселение в отель"
+    },
+    {
+        "id": 2,
+        "placeId": 4,
+        "day": 1,
+        "date": "05.08.2026",
+        "startTime": "22:00",
+        "endTime": null,
+        "note": "Колесо обозрения"
+    },
+    {
+        "id": 3,
+        "placeId": 2,
+        "day": 2,
+        "date": "06.08.2026",
+        "startTime": "10:00",
+        "endTime": "15:00",
+        "note": "Аквапарк"
+    },
+    {
+        "id": 4,
+        "placeId": 3,
+        "day": 3,
+        "date": "07.08.2026",
+        "startTime": "12:00",
+        "endTime": "16:30",
+        "note": "Зоопарк"
+    }
+]
