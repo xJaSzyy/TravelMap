@@ -17,6 +17,8 @@ function MarkerLayer({map, places}) {
                 ])
             )
     );
+
+    const [activeLayer, setActiveLayer] = useState("Август 2026");
     
     const clusterGroup = useRef(
         L.markerClusterGroup({
@@ -63,6 +65,7 @@ function MarkerLayer({map, places}) {
         <>
             {
                 places
+                    .filter(place => place.layers.includes(activeLayer))
                     .filter(place => types[place.type])
                     .map((place) => (
                     <PlaceMarker
@@ -77,6 +80,16 @@ function MarkerLayer({map, places}) {
             <Filter
                 types={types}
                 setTypes={setTypes}
+            />
+
+            <LayersPanel
+                layers={[
+                    ...new Set(
+                        places.flatMap(place => place.layers)
+                    )
+                ]}
+                activeLayer={activeLayer}
+                setActiveLayer={setActiveLayer}
             />
         </>
     );

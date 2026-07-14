@@ -114,6 +114,10 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
 }
 
+.marker-default {
+    background: #838383;
+}
+
 .marker-food {
     background: #df5a6a;
 }
@@ -247,6 +251,32 @@ body {
     background-color: #424242;
     color: white;
     font-weight: bold;
+}
+
+.layers-panel {
+    position: absolute;
+    top: 24px;
+    left: 16px;
+    z-index: 1000;
+    background: white;
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .25);
+    font-size: 14px;
+    line-height: 24px;
+    max-height: 60vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.layers-panel {
+    z-index: 9999;
+    pointer-events: auto;
+}
+
+.layers-panel button {
+    pointer-events: auto;
+    touch-action: manipulation;
 }
 
 @media (max-width: 600px) {
