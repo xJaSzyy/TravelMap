@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from 'react';
 import L from 'leaflet';
 import MarkerLayer from '../MarkerLayer/MarkerLayer.jsx';
 import styles from './Map.module.css';
+import TimelinePanel from '../TimelinePanel/TimelinePanel.jsx';
 
 function Map({ places }) {
     const [map, setMap] = useState(null);
@@ -31,6 +32,8 @@ function Map({ places }) {
             <div ref={mapRef} id={styles.map} />
 
             {map && <MarkerLayer map={map} places={places} />}
+
+            <TimelinePanel map={map} places={places} />
         </>
     );
 }

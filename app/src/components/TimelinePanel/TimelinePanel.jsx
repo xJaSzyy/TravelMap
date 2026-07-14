@@ -1,7 +1,8 @@
 import styles from './TimelinePanel.module.css';
 import { useEffect, useMemo, useState } from 'react';
+import { drawRoute } from '../../services/routing.js';
 
-function TimelinePanel({ places }) {
+function TimelinePanel({ map, places }) {
     const [visits, setVisits] = useState([]);
 
     useEffect(() => {
@@ -45,7 +46,7 @@ function TimelinePanel({ places }) {
     return (
         <div className={styles.timeline}>
             {timelinePlaces.map((place) => (
-                <div key={place.id} className={styles.card}>
+                <div key={place.id} className={styles.card} onClick={() => drawRoute(place, map)}>
                     <div className={styles.icon}>
                         <img src={place.icon} />
                     </div>

@@ -33,7 +33,7 @@
     background: transparent;
     padding: 2px 0;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
     text-align: left;
     -webkit-tap-highlight-color: transparent;
@@ -72,10 +72,14 @@
     font-weight: bold;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .layersPanel {
         top: 40px;
         left: 16px;
+    }
+
+    .item {
+        font-size: 16px;
     }
 
     .checkbox {

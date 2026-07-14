@@ -7,7 +7,6 @@
     padding: 8px;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-    font-size: 14px;
     line-height: 24px;
     max-height: 60vh;
     overflow-y: auto;
@@ -23,7 +22,7 @@
     background: transparent;
     padding: 2px 0;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
     text-align: left;
     -webkit-tap-highlight-color: transparent;
@@ -62,10 +61,14 @@
     font-weight: bold;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .filter {
         top: 40px;
         right: 16px;
+    }
+
+    .item {
+        font-size: 16px;
     }
 
     .checkbox {

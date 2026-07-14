@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import Map from './components/Map/Map.jsx';
-import TimelinePanel from './components/TimelinePanel/TimelinePanel.jsx';
 
 function App() {
     const [places, setPlaces] = useState([]);
@@ -14,8 +13,6 @@ function App() {
     return (
         <div className="app">
             <Map places={places} />
-
-            <TimelinePanel places={places} />
         </div>
     );
 }
