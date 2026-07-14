@@ -1,0 +1,33 @@
+.numberMarker div {
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+}
+
+.marker-default {
+    background: #838383;
+}
+
+.marker-food {
+    background: #df5a6a;
+}
+
+.marker-walk {
+    background: #77bd42;
+}
+
+.marker-rest {
+    background: #e4824c;
+}
+
+.marker-fun {
+    background: #48a5ed;
+}

@@ -1,19 +1,10 @@
-import {useRef} from "react";
-import {categories} from "../data/categories.js";
+import {categories} from "../../data/categories.js";
+import styles from "./Filter.module.css";
+import markerStyles from "../PlaceMarker/PlaceMarker.module.css";
 
 function Filter({types, setTypes}) {
 
-    const lastClick = useRef(0);
-
     function toggle(type) {
-        const now = Date.now();
-
-        if (now - lastClick.current < 400) {
-            return;
-        }
-
-        lastClick.current = now;
-
         setTypes(prev => ({
             ...prev,
             [type]: !prev[type]
@@ -22,14 +13,14 @@ function Filter({types, setTypes}) {
 
     return (
         <div
-            className="filter"
+            className={styles.filter}
             onTouchStart={(e) => e.stopPropagation()}
         >
 
             {categories.map(category => (
                 <button
                     key={category.id}
-                    className="filter-item"
+                    className={styles.item}
                     type="button"
                     onClick={(e) => {
                         e.stopPropagation();
@@ -38,9 +29,9 @@ function Filter({types, setTypes}) {
                 >
                     <span
                         className={
-                            `custom-checkbox ${
+                            `${styles.checkbox} ${
                                 types[category.id]
-                                    ? category.className
+                                    ? markerStyles[category.className]
                                     : ""
                             }`
                         }

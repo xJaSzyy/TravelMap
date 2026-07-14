@@ -1,10 +1,10 @@
 import {useEffect, useRef, useState} from "react";
 import L from "leaflet";
 import "leaflet.markercluster";
-import PlaceMarker from "./PlaceMarker";
-import Filter from "./Filter.jsx";
-import LayersPanel from "./LayersPanel.jsx";
-import {categories} from "../data/categories.js";
+import PlaceMarker from "../PlaceMarker/PlaceMarker.jsx";
+import Filter from "../Filter/Filter.jsx";
+import LayersPanel from "../LayersPanel/LayersPanel.jsx";
+import {categories} from "../../data/categories.js";
 
 function MarkerLayer({map, places}) {
 

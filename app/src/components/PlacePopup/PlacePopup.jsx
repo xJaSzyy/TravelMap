@@ -1,3 +1,5 @@
+import styles from './PlacePopup.module.css';
+
 function PlacePopup({place}) {
 
     const yandex = place.yandex || `https://yandex.ru/maps/?pt=${place.lon},${place.lat}&z=18`;
@@ -5,40 +7,40 @@ function PlacePopup({place}) {
 
     return (
         <div className="popup-content">
-            <div className="popup-title">
+            <div className={styles.popupTitle}>
                 {place.name}
             </div>
 
-            <div className="popup-description">
+            <div className={styles.popupDescription}>
                 {place.description}
             </div>
 
-            <div className="popup-info">
+            <div className={styles.popupInfo}>
                 {
                     place.rating &&
-                    <div className="popup-rating">
+                    <div className={styles.popupRating}>
                         ⭐ {place.rating.toFixed(1)}
                     </div>
                 }
 
                 {
                     place.hours &&
-                    <div className="popup-hours">
+                    <div className={styles.popupHours}>
                         🕒 {place.hours}
                     </div>
                 }
             </div>
 
-            <div className="popup-buttons">
-                <a href={yandex} target="_blank" className="map-icon">
+            <div className={styles.popupButtons}>
+                <a href={yandex} target="_blank" className={styles.mapIcon}>
                     <img src={`${import.meta.env.BASE_URL}icons/yandex.svg`} />
                 </a>
 
-                <a href={dgis} target="_blank" className="map-icon">
+                <a href={dgis} target="_blank" className={styles.mapIcon}>
                     <img src={`${import.meta.env.BASE_URL}icons/2gis.svg`} />
                 </a>
 
-                <button id={`route-btn-${place.id}`} className="map-icon route-button">
+                <button id={`route-btn-${place.id}`} className={`${styles.mapIcon} ${styles.routeButton}`}>
                     <img src={`${import.meta.env.BASE_URL}icons/route.png`} />
                 </button>
             </div>

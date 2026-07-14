@@ -1,20 +1,23 @@
+import styles from "./LayersPanel.module.css";
+import markerStyles from "../PlaceMarker/PlaceMarker.module.css";
+
 function LayersPanel({layers, activeLayer, setActiveLayer}) {
 
     return (
-        <div className="layers-panel">
+        <div className={styles.layersPanel}>
 
             {layers.map((layer) => (
 
                 <button
                     key={layer}
-                    className="filter-item"
+                    className={styles.item}
                     type="button"
                     onClick={() => {
                         setActiveLayer(layer);
                     }}
                 >
 
-                    <span className="custom-checkbox marker-default">
+                    <span className={`${styles.checkbox} ${markerStyles["marker-default"]}`}>
                         {activeLayer === layer && "✓"}
                     </span>
 

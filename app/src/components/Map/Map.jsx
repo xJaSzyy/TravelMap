@@ -1,6 +1,7 @@
 import {useEffect, useState, useRef} from "react";
 import L from "leaflet";
-import MarkerLayer from "./MarkerLayer";
+import MarkerLayer from "../MarkerLayer/MarkerLayer.jsx";
+import styles from "./Map.module.css";
 
 function Map({ places }) {
 
@@ -30,7 +31,7 @@ function Map({ places }) {
         <>
             <div
                 ref={mapRef}
-                id="map"
+                id={styles.map}
             />
             
             {map && (

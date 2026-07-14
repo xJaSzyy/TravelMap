@@ -1,0 +1,85 @@
+.layersPanel {
+    position: absolute;
+    top: 24px;
+    left: 16px;
+    z-index: 1000;
+    background: white;
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .25);
+    font-size: 14px;
+    line-height: 24px;
+    max-height: 60vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.layersPanel {
+    z-index: 9999;
+    pointer-events: auto;
+}
+
+.layersPanel button {
+    pointer-events: auto;
+    touch-action: manipulation;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 2px 0;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+    -webkit-tap-highlight-color: transparent;
+    color: #222;
+    -webkit-appearance: none;
+    font-family: inherit;
+}
+
+.checkbox {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.item input {
+    display: none;
+}
+
+.item input:not(:checked) + .checkbox {
+    background: #ccc !important;
+}
+
+.item input:checked + .checkbox::after {
+    content: "✓";
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .layersPanel {
+        top: 40px;
+        left: 16px;
+    }
+
+    .checkbox {
+        width: 16px;
+        height: 16px;
+    }
+}
