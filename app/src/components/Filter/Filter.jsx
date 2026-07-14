@@ -1,23 +1,18 @@
-import {categories} from "../../data/categories.js";
-import styles from "./Filter.module.css";
-import markerStyles from "../PlaceMarker/PlaceMarker.module.css";
+import { categories } from '../../data/categories.js';
+import styles from './Filter.module.css';
+import markerStyles from '../PlaceMarker/PlaceMarker.module.css';
 
-function Filter({types, setTypes}) {
-
+function Filter({ types, setTypes }) {
     function toggle(type) {
-        setTypes(prev => ({
+        setTypes((prev) => ({
             ...prev,
-            [type]: !prev[type]
+            [type]: !prev[type],
         }));
     }
 
     return (
-        <div
-            className={styles.filter}
-            onTouchStart={(e) => e.stopPropagation()}
-        >
-
-            {categories.map(category => (
+        <div className={styles.filter} onTouchStart={(e) => e.stopPropagation()}>
+            {categories.map((category) => (
                 <button
                     key={category.id}
                     className={styles.item}
@@ -28,22 +23,16 @@ function Filter({types, setTypes}) {
                     }}
                 >
                     <span
-                        className={
-                            `${styles.checkbox} ${
-                                types[category.id]
-                                    ? markerStyles[category.className]
-                                    : ""
-                            }`
-                        }
+                        className={`${styles.checkbox} ${
+                            types[category.id] ? markerStyles[category.className] : ''
+                        }`}
                     >
-                        {types[category.id] && "✓"}
+                        {types[category.id] && '✓'}
                     </span>
 
                     {category.name}
-
                 </button>
             ))}
-
         </div>
     );
 }

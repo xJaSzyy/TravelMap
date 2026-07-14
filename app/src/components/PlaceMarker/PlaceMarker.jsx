@@ -1,36 +1,30 @@
-import {useEffect} from "react";
-import L from "leaflet";
-import PlacePopup from "../PlacePopup/PlacePopup.jsx";
-import {renderToStaticMarkup} from "react-dom/server";
-import {drawRoute} from "../../services/routing.js";
-import styles from "./PlaceMarker.module.css";
+import { useEffect } from 'react';
+import L from 'leaflet';
+import PlacePopup from '../PlacePopup/PlacePopup.jsx';
+import { renderToStaticMarkup } from 'react-dom/server';
+import { drawRoute } from '../../services/routing.js';
+import styles from './PlaceMarker.module.css';
 
-function PlaceMarker({map, place, clusterGroup}) {
-
+function PlaceMarker({ map, place, clusterGroup }) {
     useEffect(() => {
-
         const markerClass = `marker-${place.type}`;
 
         const icon = L.divIcon({
             className: styles.numberMarker,
             html: `<div class="${styles[markerClass]}">${place.id}</div>`,
             iconSize: [32, 32],
-            iconAnchor: [16, 16]
+            iconAnchor: [16, 16],
         });
 
-        const marker = L.marker(
-            [place.lat, place.lon], {icon}
-        );
+        const marker = L.marker([place.lat, place.lon], { icon });
 
-        const popup = renderToStaticMarkup(
-            <PlacePopup place={place}/>
-        );
+        const popup = renderToStaticMarkup(<PlacePopup place={place} />);
 
         marker.bindPopup(popup, {
-            closeButton: false
+            closeButton: false,
         });
 
-        marker.on("popupopen", () => {
+        marker.on('popupopen', () => {
             const btn = document.getElementById(`route-btn-${place.id}`);
 
             if (btn) {
@@ -40,8 +34,8 @@ function PlaceMarker({map, place, clusterGroup}) {
 
         clusterGroup.addLayer(marker);
 
-        marker.on("click", () => {
-            map.flyTo([place.lat, place.lon], 16, {duration: 0.75});
+        marker.on('click', () => {
+            map.flyTo([place.lat, place.lon], 16, { duration: 0.75 });
         });
 
         return () => {
