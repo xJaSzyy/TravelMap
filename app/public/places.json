@@ -10,7 +10,8 @@
         "type": "rest",
         "rating": 5.0,
         "hours": "Круглосуточно",
-        "layers": ["Август 2026"]
+        "layers": ["Август 2026"],
+        "icon": "https://avatars.mds.yandex.net/get-altay/10142335/2a0000018bdb60db722d920756404cf2e47d/XXXL"
     },
     {
         "id": 2,
@@ -23,7 +24,8 @@
         "type": "fun",
         "rating": 5.0,
         "hours": "10:00–21:00",
-        "layers": ["Август 2026"]
+        "layers": ["Август 2026"],
+        "icon": "https://avatars.mds.yandex.net/get-vh/4948429/2a00000191cf5624b9c186a9e2c8fd6aba03/smart_crop_500x500"
     },
     {
         "id": 3,
@@ -49,7 +51,8 @@
         "type": "walk",
         "rating": 5.0,
         "hours": "13:00–00:00",
-        "layers": ["Август 2026"]
+        "layers": ["Август 2026"],
+        "icon": "https://avatars.mds.yandex.net/get-altay/11244149/2a0000018ca0f4ed0f350c15ef690553c398/XXXL"
     },
     {
         "id": 5,
