@@ -65,7 +65,8 @@
         "type": "walk",
         "rating": 4.9,
         "hours": "Круглосуточно",
-        "layers": ["Август 2026"]
+        "layers": ["Август 2026"],
+        "icon": "https://avatars.mds.yandex.net/get-altay/11393517/2a0000018db52b512dfb5de1a7d0ef5cfe0f/L_height"
     },
     {
         "id": 6,
@@ -91,7 +92,8 @@
         "type": "food",
         "rating": 4.8,
         "hours": "10:00–22:00",
-        "layers": ["Август 2026"]
+        "layers": ["Август 2026"],
+        "icon": "https://avatars.mds.yandex.net/get-altay/10705374/2a0000018a8862faef917cb2d0b8b3b986f1/XXXL"
     },
     {
         "id": 8,
