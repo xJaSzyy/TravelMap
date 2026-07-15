@@ -38,7 +38,8 @@
         "type": "walk",
         "rating": 5.0,
         "hours": "08:00–23:00",
-        "layers": ["Август 2026"]
+        "layers": ["Август 2026"],
+        "icon": "https://avatars.mds.yandex.net/get-altay/363317/2a0000015e5321a5ec67245c38ae499f8ed0/XXXL"
     },
     {
         "id": 4,
@@ -79,7 +80,8 @@
         "type": "food",
         "rating": 4.9,
         "hours": "08:00–22:00",
-        "layers": ["Август 2026"]
+        "layers": ["Август 2026"],
+        "icon": "https://avatars.mds.yandex.net/get-altay/18140291/2a0000019bbce605917f3d030d920948a737/XXXL"
     },
     {
         "id": 7,
@@ -106,7 +108,8 @@
         "type": "food",
         "rating": 5.0,
         "hours": "10:00–23:00",
-        "layers": ["Август 2026"]
+        "layers": ["Август 2026"],
+        "icon": "https://avatars.mds.yandex.net/get-altay/1420183/2a00000184a92821f1aedf6dafdcca63c488/XXXL"
     },
     {
         "id": 9,
@@ -146,5 +149,19 @@
         "rating": 4.5,
         "hours": "11:00–23:00",
         "layers": ["Август 2026"]
+    },
+    {
+        "id": 12,
+        "name": "Вкусно и точка",
+        "description": "Быстрое питание",
+        "lat": 55.050631,
+        "lon": 82.915298,
+        "yandex": "https://yandex.ru/maps/-/CTF0I0n7",
+        "2gis": "https://go.2gis.com/Vmkvm",
+        "type": "food",
+        "rating": 4.4,
+        "hours": "07:00–00:00",
+        "layers": ["Август 2026"],
+        "icon": "https://avatars.mds.yandex.net/get-altay/18473509/2a0000019f1d6572682ea24989dd8ec0c222/XXXL"
     }
 ]

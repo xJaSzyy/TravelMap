@@ -21,8 +21,15 @@ function TimelinePanel({ map, places }) {
                 if (!place) return null;
 
                 const [day, month, year] = visit.date.split('.');
+                const [hours, minutes] = visit.startTime.split(':');
 
-                const visitDate = new Date(year, month - 1, day);
+                const visitDate = new Date(
+                    Number(year),
+                    Number(month) - 1,
+                    Number(day),
+                    Number(hours),
+                    Number(minutes)
+                );
 
                 return {
                     ...place,

@@ -9,6 +9,22 @@
     },
     {
         "id": 2,
+        "placeId": 7,
+        "date": "05.08.2026",
+        "startTime": "16:30",
+        "endTime": null,
+        "note": "Обед в Баклажани"
+    },
+    {
+        "id": 3,
+        "placeId": 5,
+        "date": "05.08.2026",
+        "startTime": "19:00",
+        "endTime": null,
+        "note": "Прогулка по парку"
+    },
+    {
+        "id": 4,
         "placeId": 4,
         "date": "05.08.2026",
         "startTime": "22:00",
@@ -16,7 +32,15 @@
         "note": "Колесо обозрения"
     },
     {
-        "id": 3,
+        "id": 5,
+        "placeId": 6,
+        "date": "06.08.2026",
+        "startTime": "08:00",
+        "endTime": "09:00",
+        "note": "Завтрак в Солнечном дне"
+    },
+    {
+        "id": 6,
         "placeId": 2,
         "date": "06.08.2026",
         "startTime": "10:00",
@@ -24,27 +48,27 @@
         "note": "Аквапарк"
     },
     {
-        "id": 4,
+        "id": 7,
+        "placeId": 8,
+        "date": "06.08.2026",
+        "startTime": "16:30",
+        "endTime": null,
+        "note": "Обед в Кардамоне"
+    },
+    {
+        "id": 8,
+        "placeId": 12,
+        "date": "07.08.2026",
+        "startTime": "10:30",
+        "endTime": null,
+        "note": "Завтрак во вкусно и точке"
+    },
+    {
+        "id": 9,
         "placeId": 3,
         "date": "07.08.2026",
         "startTime": "12:00",
         "endTime": "16:30",
         "note": "Зоопарк"
-    },
-    {
-        "id": 5,
-        "placeId": 7,
-        "date": "05.08.2026",
-        "startTime": "16:00",
-        "endTime": null,
-        "note": "Вкусный обед"
-    },
-    {
-        "id": 6,
-        "placeId": 5,
-        "date": "05.08.2026",
-        "startTime": "19:00",
-        "endTime": null,
-        "note": "Прогулка по парку"
     }
 ]
